@@ -21,7 +21,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
-          cd ~/my-api || git clone https://github.com/yourusername/my-api.git ~/my-api && cd ~/my-api
+          cd ~/my-api || git clone https://github.com/afelallaric/my-api.git ~/my-api && cd ~/my-api
           git pull origin main
           docker build -t my-api:latest .
           docker stop my-api || true
